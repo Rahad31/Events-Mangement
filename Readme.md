@@ -8,4 +8,4 @@
 4.individual service details are given
 5.Provided services also given in privte route
 
-live link : https://event-management-15dbe.web.app
+live link : https://event-management-15dbe.web.app/

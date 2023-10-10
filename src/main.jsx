@@ -34,7 +34,7 @@ const router = createBrowserRouter([
 
       {
         path: "/Service",
-        loader: () => fetch("../public/event.json"),
+        loader: () => fetch("/event.json"),
         element: (
           <PrivateRoute>
             <Serviceprovided></Serviceprovided>
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/bookings",
-        loader: () => fetch("../public/event.json"),
+        loader: () => fetch("/event.json"),
         element: (
           <PrivateRoute>
             <Bookings></Bookings>
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/Servicecard/:id",
-        loader: () => fetch("../public/event.json"),
+        loader: () => fetch("/event.json"),
         element: (
           <PrivateRoute>
             <Eventdetails></Eventdetails>

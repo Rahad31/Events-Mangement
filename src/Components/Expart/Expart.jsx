@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 const Expart = () => {
   const [expart, setexpart] = useState([]);
   useEffect(() => {
-    fetch("../expart.json")
+    fetch("/expart.json")
       .then((res) => res.json())
       .then((data) => setexpart(data));
   }, []);

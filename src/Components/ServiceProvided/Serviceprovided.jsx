@@ -3,11 +3,11 @@ import Providedcard from "../Providedcard/Providedcard";
 const Serviceprovided = () => {
   const [expart, setexpart] = useState([]);
   useEffect(() => {
-    fetch("../expart.json")
+    fetch("/expart.json")
       .then((res) => res.json())
       .then((data) => setexpart(data));
   }, []);
-  
+
   return (
     <div>
       <div className="container mx-auto my-20 flex flex-col justify-center items-center gap-2 px-2">
