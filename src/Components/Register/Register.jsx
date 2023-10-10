@@ -32,15 +32,14 @@ const Register = () => {
       );
       return;
     } else {
+      navigate("/");
       createUser(email, password, name, image)
         .then((result) => {
           console.log(result.user);
           toast("Successfully Registered and Login");
           navigate("/");
         })
-        .catch(() => {
-          
-        });
+        .catch(() => {});
     }
   };
 

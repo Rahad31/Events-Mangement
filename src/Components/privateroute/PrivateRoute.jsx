@@ -3,15 +3,15 @@ import { AuthContext } from "../Provider/Provider";
 import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({ children }) => {
-  const { user, loading } = useContext(AuthContext);
+  const { user} = useContext(AuthContext);
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center">
-        <span className="loading loading-ring loading-lg"></span>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="flex justify-center items-center">
+  //       <span className="loading loading-ring loading-lg"></span>
+  //     </div>
+  //   );
+  // }
 
   if (user) {
     return children;

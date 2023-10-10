@@ -70,9 +70,14 @@ const Navbar = () => {
               {navlinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-3xl">
-            <span className="text-[#EAA334] ">Mosaic</span> Events
-          </a>
+          <div className="font-bold text-3xl flex flex-col pl-1  gap-1 md:flex-row">
+            <div>
+              <span className="text-[#EAA334] ">Mosaic</span>
+            </div>
+            <div>
+              <span>Events</span>
+            </div>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navlinks}</ul>

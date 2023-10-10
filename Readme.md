@@ -1,8 +1,11 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#features
 
-Currently, two official plugins are available:
+1.can choose multiple event by user
+2.login & registration valition will be done
+3.user profile is also present for display
+4.individual service details are given
+5.Provided services also given in privte route
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+live link : https://event-management-15dbe.web.app

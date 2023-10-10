@@ -31,15 +31,7 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
-      {
-        path: "/Servicecard/:id",
-        loader: () => fetch("../public/event.json"),
-        element: (
-          <PrivateRoute>
-            <Eventdetails></Eventdetails>
-          </PrivateRoute>
-        ),
-      },
+
       {
         path: "/Service",
         loader: () => fetch("../public/event.json"),
@@ -64,6 +56,15 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Profile></Profile>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/Servicecard/:id",
+        loader: () => fetch("../public/event.json"),
+        element: (
+          <PrivateRoute>
+            <Eventdetails></Eventdetails>
           </PrivateRoute>
         ),
       },

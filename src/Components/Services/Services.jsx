@@ -2,17 +2,17 @@ import { useState, useEffect } from "react";
 import Servicecard from "../Servicecard/Servicecard";
 import Aos from "aos";
 import "aos/dist/aos.css";
- 
+
 const Services = () => {
   const [events, setEvents] = useState([]);
   useEffect(() => {
-    fetch(".../../../../../public/event.json")
+    fetch("../event.json")
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, []);
   useEffect(() => {
     Aos.init();
-  },[]);
+  }, []);
   return (
     <div data-aos="fade-right">
       <div className="text-center flex flex-col justify-center items-center gap-4 mb-20">

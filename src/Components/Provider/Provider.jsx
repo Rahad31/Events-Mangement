@@ -22,25 +22,24 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  
+
   const createUser = (email, password, name, image) => {
     setLoading(true);
     // let Name = name;console.log("ok");
     // let Img = image;
     // console.log(name, image);
     createUserWithEmailAndPassword(auth, email, password)
-    const navigate=useNavigate()
       .then((result) => {
         toast("Successfully Register and Login");
-        
+
         console.log(result.user);
         updateProfile(result.user, {
           displayName: name,
           photoURL: image,
         });
-        navigate("/");
+        // ...
       })
-      .catch((error) => {
+      .catch(() => {
         // ..
       });
   };
@@ -48,11 +47,13 @@ const AuthProvider = ({ children }) => {
   const signInUser = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
+    
   };
 
   const signInWithGoogle = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
+    
   };
 
   const logOut = () => {

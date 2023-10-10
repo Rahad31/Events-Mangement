@@ -1,20 +1,15 @@
 import { useState, useEffect } from "react";
-import Expartcart from "../Expartcart/Expartcart";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import Providedcard from "../Providedcard/Providedcard";
 const Serviceprovided = () => {
   const [expart, setexpart] = useState([]);
   useEffect(() => {
-    fetch(".../../../../../public/expart.json")
+    fetch("../expart.json")
       .then((res) => res.json())
       .then((data) => setexpart(data));
   }, []);
-  useEffect(() => {
-    Aos.init();
-  }, []);
+  
   return (
-    <div >
+    <div>
       <div className="container mx-auto my-20 flex flex-col justify-center items-center gap-2 px-2">
         <h1 className="text-4xl  text-center font-bold text-[#EAA334]">
           Our Service on The Event

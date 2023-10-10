@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 const Expart = () => {
   const [expart, setexpart] = useState([]);
   useEffect(() => {
-    fetch(".../../../../../public/expart.json")
+    fetch("../expart.json")
       .then((res) => res.json())
       .then((data) => setexpart(data));
   }, []);
@@ -23,7 +23,7 @@ const Expart = () => {
         </div>
         <div className="flex flex-row flex-wrap gap-5 justify-center ">
           {expart.map((expart) => (
-            <Expartcart expart={expart}></Expartcart>
+            <Expartcart key={expart.name} expart={expart}></Expartcart>
           ))}
         </div>
       </div>

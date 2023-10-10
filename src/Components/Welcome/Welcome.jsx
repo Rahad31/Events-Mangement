@@ -7,7 +7,7 @@ const Welcome = () => {
     Aos.init();
   }, []);
   return (
-    <div className="container mx-auto my-24 flex flex-col gap-12 lg:flex-row">
+    <div className="container mx-auto my-24 w-[350px] flex flex-col justify-center items-center md:w-auto   gap-12 lg:flex-row">
       <div data-aos="fade-right" className="flex flex-col gap-2">
         <h1 className="text-4xl font-bold text-[#EAA334]">WELCOME</h1>
         <h3 className="text-xl">Every Events will be Memorable</h3>
@@ -47,9 +47,7 @@ const Welcome = () => {
           height="460"
           src="https://www.youtube.com/embed/ipw1fQad5sg?si=VoKATQThHYw9zs6d"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
         ></iframe>
       </div>
     </div>
